@@ -200,7 +200,6 @@ input, button{ /*round input and give them a little more padding*/
 .right-side-container footer #submit-sign-up-form{
     height: 4rem;
     width: fit-content;
-    font-style: italic;
 }
 
 .input:valid{
