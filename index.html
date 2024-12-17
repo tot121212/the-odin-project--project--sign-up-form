@@ -28,40 +28,81 @@
                 <form action="#" method="post" id="sign-up-form">
                     <div class="form-element-container">
                         <label for="first-name">First Name</label>
-                        <input type="text" name="First Name" id="first-name" placeholder="John" autocomplete="given-name" required>
+                        <input
+                            type="text"
+                            name="First Name"
+                            id="first-name"
+                            placeholder="John"
+                            autocomplete="given-name"
+                            required>
                     </div>
                     <div class="form-element-container">
                         <label for="last-name">Last Name</label>
-                        <input type="text" name="Last Name" id="last-name" placeholder="Doe" autocomplete="family-name" required>
+                        <input
+                            type="text"
+                            name="Last Name"
+                            id="last-name"
+                            placeholder="Doe"
+                            autocomplete="family-name"
+                            required>
                     </div>
                     <div class="form-element-container">
                         <label for="email">Email</label>
-                        <input type="email" name="Email" id="email" placeholder="foo@bar.com" autocomplete="email" required>
+                        <input
+                            type="email"
+                            name="Email"
+                            id="email"
+                            pattern="^[\w\-.]+@([\w\-]+\.)+[a-zA-Z]{2,}$"
+                            placeholder="foo@bar.com"
+                            autocomplete="email"
+                            required>
                     </div>
                     <div class="form-element-container">
                         <label for="phone-number">Phone Number</label>
-                        <input type="number" name="Phone Number" id="phone-number" placeholder="XXX-XXX-XXXX" autocomplete="tel" required>
+                        <input
+                            type="tel"
+                            name="Phone Number"
+                            id="phone-number"
+                            pattern="^\d{3}-\d{3}-\d{4}$"
+                            placeholder="XXX-XXX-XXXX"
+                            autocomplete="tel"
+                            required
+                            minlength="12"
+                            maxlength="12">
                     </div>
                     <div class="form-element-container">
                         <label for="password">Password</label>
-                        <input type="password" name="Password" id="password" placeholder="••••••••••••••••" minlength="5" autocomplete="new-password" required>
+                        <input
+                            type="password"
+                            name="Password"
+                            id="password"
+                            placeholder="••••••••••••••••"
+                            minlength="5"
+                            autocomplete="new-password"
+                            required>
                     </div>
                     <div class="form-element-container">
                         <label for="confirm-password">Confirm Password</label>
-                        <input type="password" name="Confirm Password" id="confirm-password" placeholder="••••••••••••••••" autocomplete="new-password" required>
+                        <input
+                            type="password"
+                            name="Confirm Password"
+                            id="confirm-password"
+                            placeholder="••••••••••••••••"
+                            autocomplete="new-password"
+                            required>
                     </div>
+                    <button type="submit" class="hidden-submit"></button>
                 </form>
+
+                <script defer src="password_verification.js"></script>
+
             </main>
         </div>
         <div class="container footer-container">
             <footer>
                 <button type="submit" id="submit-sign-up-form">Let the slaughter begin!</button>
 
-                <script defer>
-                    document.querySelector("#submit-sign-up-form").addEventListener("click", function() {
-                        document.querySelector(".right-side-container main > #sign-up-form").submit(); // Triggers the form submission
-                    });
-                </script>
+                <script defer src="link_submit_sign_up_form_to_hidden_submit.js"></script>
 
                 <div id="log-in-container">
                     <a id="redirect-to-log-in" href="#">Click here if you have an account.</a>

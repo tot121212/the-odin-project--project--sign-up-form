@@ -62,6 +62,10 @@ input, button{ /*round input and give them a little more padding*/
     border-color: gray;
 }
 
+.hidden-submit{
+    display: none;
+}
+
 
 
 
@@ -199,6 +203,14 @@ input, button{ /*round input and give them a little more padding*/
     height: 4rem;
     width: fit-content;
     font-style: italic;
+}
+
+.input:valid{
+    border-color: green;
+}
+
+.input:invalid {
+    border-color: red;
 }
 
 
