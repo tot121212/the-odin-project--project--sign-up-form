@@ -3,12 +3,8 @@
     --semi-transparent-green: rgba(144, 238, 144, 0.35);
 }
 
-:root, body, button {
-    font-family: "JetBrains Mono", monospace;
-}
-
-.left-side-banner #banner-text{
-    font-family: "JetBrains Mono ExtraLight", monospace;
+* {
+    font-family: "JetBrains Mono", "Arial", monospace;
 }
 
 
@@ -36,7 +32,7 @@
 
 
 
-* {
+body {
     box-sizing: border-box;
 }
 
@@ -116,6 +112,7 @@ input, button{ /*round input and give them a little more padding*/
 
 .left-side-banner #photo-source > a{
     text-decoration: none;
+    font-weight: lighter;
 }
 
 
@@ -146,6 +143,7 @@ input, button{ /*round input and give them a little more padding*/
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-bottom: 1rem;
 }
 
 .right-side-container > .main-container{
@@ -155,14 +153,14 @@ input, button{ /*round input and give them a little more padding*/
     z-index: 1;
 }
 
-.right-side-container .container > *{ /* adds width, margin for header, main, footer */
+.right-side-container .container > * { /* adds width, margin for header, main, footer */
     width: 75%;
     margin: 2rem;
 }
 
-.right-side-container > .container > * > *{ /*add default margin for elements inside header, main, footer*/
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+.right-side-container > .container > * > * { /*add default margin for elements inside header, main, footer*/
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .right-side-container header, .right-side-container footer{
