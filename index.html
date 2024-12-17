@@ -2,10 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css-reset.css">
     <link rel="stylesheet" href="style.css">
-    <title>Title</title>
+    <title>Squirrel ICBM Sign Up Form</title>
 </head>
 <body>
+    <div class="left-side-banner">
+        <div id="banner-img">
+            <img src="media/niilo-isotalo-r_TzuObQYBQ-unsplash.jpg" alt="Image of squirrel">
+        </div>
+        <div id="banner-text-container">
+            <div id="banner-text">SQRM</div>
+        </div>
+        <div id="photo-source">Photo by <a href="https://unsplash.com/@niiloi?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Niilo Isotalo</a> on <a href="https://unsplash.com/photos/wildlife-photography-of-brown-squirrel-r_TzuObQYBQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></div>
+    </div>
+    <div class="right-side-container">
+        <div class="container header-container">
+            <header>
+                <div id="header-text">We have been providing squirrel-based solutions for war applications for over 50 years!</div>
+            </header>
+        </div>
+        <div class="container main-container">
+            <main>
+                <div id="main-header-text">Make your account below...</div>
+                <form action="#" method="post" id="sign-up-form">
+                    <div class="form-element-container">
+                        <label for="first-name">First Name</label>
+                        <input type="text" name="First Name" id="first-name" placeholder="John" autocomplete="given-name" required>
+                    </div>
+                    <div class="form-element-container">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="Last Name" id="last-name" placeholder="Doe" autocomplete="family-name" required>
+                    </div>
+                    <div class="form-element-container">
+                        <label for="email">Email</label>
+                        <input type="email" name="Email" id="email" placeholder="foo@bar.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-element-container">
+                        <label for="phone-number">Phone Number</label>
+                        <input type="number" name="Phone Number" id="phone-number" placeholder="XXX-XXX-XXXX" autocomplete="tel" required>
+                    </div>
+                    <div class="form-element-container">
+                        <label for="password">Password</label>
+                        <input type="password" name="Password" id="password" placeholder="••••••••••••••••" minlength="5" autocomplete="new-password" required>
+                    </div>
+                    <div class="form-element-container">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" name="Confirm Password" id="confirm-password" placeholder="••••••••••••••••" autocomplete="new-password" required>
+                    </div>
+                </form>
+            </main>
+        </div>
+        <div class="container footer-container">
+            <footer>
+                <button type="submit" id="submit-sign-up-form">Let the slaughter begin!</button>
 
+                <script defer>
+                    document.querySelector("#submit-sign-up-form").addEventListener("click", function() {
+                        document.querySelector(".right-side-container main > #sign-up-form").submit(); // Triggers the form submission
+                    });
+                </script>
+
+                <div id="log-in-container">
+                    <a id="redirect-to-log-in" href="#">Click here if you have an account.</a>
+                </div>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>

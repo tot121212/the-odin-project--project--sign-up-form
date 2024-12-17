@@ -1,0 +1,239 @@
+:root{
+    --half-opacity-black: rgba(0, 0, 0, 0.5);
+    --semi-transparent-green: rgba(144, 238, 144, 0.35);
+}
+
+:root, body, button {
+    font-family: "JetBrains Mono", monospace;
+}
+
+.left-side-banner #banner-text{
+    font-family: "JetBrains Mono ExtraLight", monospace;
+}
+
+
+
+
+.left-side-banner{
+    color: white;
+}
+
+.left-side-banner a{
+    color: lightgreen;
+}
+
+.right-side-container{
+    color: black;
+}
+
+.right-side-container a{
+    color: green;
+}
+
+.left-side-banner #banner-text-container, .right-side-container footer #submit-sign-up-form {
+    background-color: var(--semi-transparent-green);
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+body > *{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
+input, button{ /*round input and give them a little more padding*/
+    padding: 0.5rem;
+    border-radius: 5px;
+    border-color: gray;
+}
+
+
+
+
+.left-side-banner{
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 30%;
+}
+
+.left-side-banner #banner-text-container {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side-banner #banner-text{
+    position: relative;
+    text-align: center;
+    font-size: calc(1rem + 2vw);
+}
+
+.left-side-banner #banner-img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 9 / 16;
+    overflow: visible;
+}
+
+.left-side-banner #banner-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.left-side-banner #photo-source{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+}
+
+.left-side-banner #photo-source > a{
+    text-decoration: none;
+}
+
+
+
+
+.right-side-container{
+    height: 100%;
+    width: 70%;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.right-side-container > .container{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.right-side-container > .header-container, .right-side-container > .footer-container{
+    background-color: lightgray;
+    z-index: 0;
+}
+
+.right-side-container > .header-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.right-side-container > .main-container{
+    background-color: white;
+    border-top: 2px solid var(--semi-transparent-green);
+    box-shadow: 10px 5px 5px var(--half-opacity-black);
+    z-index: 1;
+}
+
+.right-side-container .container > *{ /* adds width, margin for header, main, footer */
+    width: 75%;
+    margin: 2rem;
+}
+
+.right-side-container > .container > * > *{ /*add default margin for elements inside header, main, footer*/
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.right-side-container header, .right-side-container footer{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+}
+
+.right-side-container main #sign-up-form{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.right-side-container main #sign-up-form > .form-element-container { /* ensures form elements are spaced apart */
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: 4rem;
+}
+
+.right-side-container main #sign-up-form > .form-element-container{ /*ensures inputs and labels are layed out correctly*/
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side-container main #sign-up-form .form-element-container > label{ /*size label font properly*/
+    font-size: small;
+}
+
+
+
+.right-side-container > footer{
+    width: 25%;
+    margin-top: 1rem;
+}
+
+.right-side-container footer #submit-sign-up-form{
+    height: 4rem;
+    width: fit-content;
+    font-style: italic;
+}
+
+
+
+
+@media (max-aspect-ratio: 4 / 5){
+    body{
+        flex-direction: column;
+    }
+
+    .left-side-banner{
+        height: 20%;
+        width: 100%;
+    }
+
+    .left-side-banner #banner-img img{ /*adjust img upward a bit*/
+        object-position: 50% 36%;
+    }
+
+
+    .left-side-banner #banner-text-container{
+        height: auto;
+    }
+
+
+    .right-side-container{
+        width: 100%;
+    }
+
+    .right-side-container, .right-side-container .container{
+        height: auto;
+        overflow: hidden;
+    }
+
+    .right-side-container .main-container main #sign-up-form{
+        grid-template-columns: 100%;
+    }
+}
